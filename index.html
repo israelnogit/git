@@ -11,97 +11,11 @@ require('conexao.php');
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-
-}
-
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    flex-direction: column;
-    background-color: rgb(75, 75, 75);
-    width: 100%;
-}
-
-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: rgb(121, 255, 248);
-    width: 250px;
-    height: 320px;
-    border-radius: 30px;
-    border: 2px solid rgb(30, 255, 0);
-
-}
-form input{
-    width: 200px;
-    height: 40px;
-    margin: 10px 0;
-    border-radius: 10px;
-    border-color: rgb(255, 255, 255);
-}
-
-button{
-    width: 80px;
-    height: 40px;
-    margin-top: 30px;
-    border-radius: 15px;
-    border: 2px solid rgb(0, 174, 255);
-}
+       <img src="Pngtree—carton box goods_6779537.png
+    " width="70%">
     </style>
 </head>
 <body>
-  <h1>Login</h1>
-  <form method="post">
-    <input type="text" name="nome" placeholder="Seu nome" required>
-    <input type="email" name="email" placeholder="Seu email" required>
-    <button type="submit" name="salvar">salvar</button>
-
-  </form>
-<?php
   
-if (isset($_POST['salvar'])&& isset($_POST['nome'])&& isset($_POST['email'])){
-
-$nome = limparPost($_POST['nome']);
-$email =limparPost($_POST['email']);
-$data = date('d-m-Y');
-
-//Validação de campo vazio
-if ($nome=="" || $nome==null){
-  echo "Nome nao pode ser vazio";
-  exit();
-}
-if ($email=="" || $email==null){
-  echo "Email nao pode ser vazio";
-  exit();
-}
-
-//Verificar se o nome está correto
-if (!preg_match("/^[a-zA-Z-' ]*$/",$nome)) {
-  echo "Somente permitido letras espaço em branco para o nome";
-  exit();
-}
-// Validação de e-mail
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  echo  "Formato de e-mail inválido";
-  exit();
-}
-
-$sql = $pdo->prepare("INSERT INTO clientes VALUES (null,?,?,?)");
-$sql->execute(array($nome,$email,$data));
-}
-echo "<b style='color:lime'>Cliente inserido com sucesso</b>";
-
-?>
 </body>
 </html>
