@@ -1,20 +1,69 @@
-<?php
-require('conexao.php');
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="s1.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-       <img src="git/—Pngtree—carton box goods_6779537.png" width="70%">
+        @import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Original Surfer', cursive;
+
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background:linear-gradient(120deg,rgb(119, 0, 255),rgb(153, 0, 255));
+            flex-direction: column;
+        }
+        h1{
+            font-size: 8em;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            text-align: center;
+        }
+        a{
+            color: rgb(17, 36, 36);
+            background: rgb(247, 246, 248);
+            width: 200px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 50px;
+            font-size: 1.4em;
+            border: 4px solid rgb(0, 183, 255);
+        }
+        @media (max-width:600px){
+            h1{
+                font-size: 6em;
+            }
+        }
     </style>
+
 </head>
 <body>
-  
+    <h1>Israel Djn</h1>
+    <a onclick="clik()" href="#">Projetos</a>
+    <p id="alert"></p>
+
+    <script>
+        var p = document.getElementById("alert");
+        
+        function clik(){
+            p.innerHTML="indisponivel"
+            p.style.color="lime"
+        }
+
+    </script>
 </body>
 </html>
